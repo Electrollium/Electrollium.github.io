@@ -97,17 +97,17 @@
 	<div class="row">
 		<div class="col-xl-6">
 			<div class="row py-2">
-				<div class="col-md"> <img class="img-fluid" src="images/swordboard/swordboard_schematic_1.png"> </div>
-				<div class="col-md"> <img class="img-fluid" src="images/swordboard/swordboard_schematic_2.png"> </div>
-				<div class="col-md"> <img class="img-fluid" src="images/swordboard/swordboard_schematic_3.png"> </div>
+				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_1.png"> </div>
+				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_2.png"> </div>
+				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_3.png"> </div>
 			</div>
 		</div>
 		
 		<div class="col-xl-6">
 			<div class="row py-2">
-				<div class="col-md"> <img class="img-fluid" src="images/swordboard/swordboard_schematic_4.png"> </div>
-				<div class="col-md"> <img class="img-fluid" src="images/swordboard/swordboard_schematic_5.png"> </div>
-				<div class="col-md"> <img class="img-fluid" src="images/swordboard/swordboard_schematic_6.png"> </div>
+				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_4.png"> </div>
+				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_5.png"> </div>
+				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_6.png"> </div>
 			</div>
 		</div>
 	
@@ -129,6 +129,14 @@
   </footer>
 </main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
+	<script>
+		$(".custom-zoomable").on('click', (ev)=>{
+			console.log(ev.target);
+		});
+		
+	</script>
 
     </body>
 </html>
