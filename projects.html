@@ -19,37 +19,7 @@
     
       
 
-<!-- header bar -->
-<header data-bs-theme="dark">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Marek Jablonski</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-			<li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" href="resume.html">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="contact.html">Contact Me</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link"  href="ethics.html">Ethics Essay</a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<div id="header"></div>
 
 <main>
 
@@ -74,8 +44,45 @@
 		</div>
 	</div>
 	
-	<hr class="featurette-divider">
 	
+	<hr class="featurette-divider">
+	<!-- SENIOR DESIGN PROJECT-->
+	<div class="row">
+		<div class="col-md-9 order-md-1">
+			<div class="row">
+				<h3> High Voltage Motor Controller </h3>
+				<p>For our Senior Design Project, my team has been tasked with developing a High Voltage Motor Controller for lightweight automotive use. The project aims to develop a viable replacement for the existing solutions that are expensive and closed systems that are difficult to debug and repair. These motor controller combinations are used for competition collegiate Solar Cars in the low KW power range. As of writing, we are currently working on developing the first hardware and software prototypes.</p>
+				<p>For this project I am a hardware engineer and the team's topic expert. While I had experience working with brushless motors and controllers before this project, I have learned a lot about the theory behind brushless motor control and how to design and build electrical hardware that is capable of transmitting and controlling an incredibly useful, but dangerous, amount of power.</p>
+			</div>	
+		</div>
+			
+		<div class="col-md-3 order-md-2">
+			<img class="img-fluid" src="images/seniordesign/M2096-3.jpg">
+			
+		</div>
+	</div>	 
+	<div class="row">
+		<p>LINK SUPPRTING DOCUMENTS AND BIG PICTURE CONTRIBUTION.</p>
+	</div>
+	
+	<hr class="featurette-divider">
+	<!-- BREADBOARD COMPUTER-->
+	<div class="row">
+		<div class="col-md-9 order-md-1">
+			<div class="row">
+				<h3> Breadboard Computer </h3>
+				<p>One of the first projects I completed here at Iowa State was redesigning and rebuilding a breadboard computer project I started in high school. This was a solo project I started as a way to learn about how computers function and the types of challenges encountered when designing the CPU. This was a relatively simple multicycle CPU capable of running my custom designed assembly language. For this project I built the infrastructure necessary to generate the CPU microcode from human-readable configuration files and an assembler capable of dynamic jump linking making programming much easier for an end user.</p><p>This was a project that I began before I entered any computer architecture classes, and as such I needed to learn everything I could about computer architecture and how CPUs, assemblers, and the required subcomponents function. I learned nearly everything required for this project from the 8-bit computer series by Ben Eater and the book he used, Digital Computer Electronics by Albert Paul Malvino. </p>
+			</div>	
+		</div>
+			
+		<div class="col-md-3 order-md-2">
+			<img class="img-fluid" src="images/breadboardcomputer/blurry.jpg">
+			
+		</div>
+	</div>
+	
+	<hr class="featurette-divider">
+	<!-- Battery Cell Monitor-->
 	<div class="row">
 		<div class="col-md-9 order-md-1">
 			<div class="row">
@@ -91,9 +98,8 @@
 		</div>
 	</div>	 
 	<div class="row">
-		<p> The next step was designing the schematic for the device, as seen below. I had to do many hours of research and planning to create the finalized solution, learning a lot about how battery management systems are designed and built. Many mistakes and misteps were made along the way but the final product is shown below. All seven cells are connected to a battery voltage monitor specifically designed for this task. This monitor also performs the task of controlling passive balancing, where energy from a single cell may be discharged to keep all cells together despite real-world irregularities. Temperatures are measured through a seperate interface connected to the bottom of the board for each module. </p>
+		<p>The schematics I designed for this PCB are seen below. I had to do many hours of research and planning to create the finalized solution, learning a lot about how battery management systems are designed and built. Many mistakes and misteps were made along the way but the final product is shown below. All seven cells are connected to a battery voltage monitor specifically designed for this task. This monitor also performs the task of controlling passive balancing, where energy from a single cell may be discharged to keep all cells together despite real-world irregularities. Temperatures are measured through a seperate interface connected to the bottom of the board for each module.</p>
 	</div>
-	
 	<div class="row">
 		<div class="col-xl-6">
 			<div class="row py-2">
@@ -102,7 +108,6 @@
 				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_3.png"> </div>
 			</div>
 		</div>
-		
 		<div class="col-xl-6">
 			<div class="row py-2">
 				<div class="col-md"> <img class="img-fluid custom-zoomable" src="images/swordboard/swordboard_schematic_4.png"> </div>
@@ -113,24 +118,28 @@
 	
 	</div>
 	<div class="row">
-		<p> The next step in design a circuit board is laying out and tracing the physical board. While this is something I had done before, I had never done anything at this scale. In the process of making the final design many revisions were made and revised to make the components fit better and eliminating as many chances for inerference as possible. I'm quite happy with the final result even though there's much that I would change with what I've learned since doing this project.</p>
+		<p> In the process of completing this project I needed lot of external resources including the application notes for the Battery Monitor IC and the detailed feedback from Solar Car leadership and alumni reviews. I'm quite happy with the final result even though there are many items that I would change with what I've learned since doing this project.</p>
 	</div>
-		
-    
-  </div>
-	
   
   <hr class="featurette-divider">
+  
+  </div>
 
   <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2023 Marek Jablonski </p>
+  <footer id="footer">
   </footer>
 </main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script>
+	
+	$(function(){
+      $("#header").load("./includes/header.html"); 
+	  $("#footer").load("./includes/footer.html"); 
+    });
+	</script>
 	<script>
 		$(".custom-zoomable").on('click', (ev)=>{
 			console.log(ev.target);
