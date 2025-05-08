@@ -1,52 +1,10 @@
-<!doctype html>
-        <html lang="en" data-bs-theme="auto">
-          <head>
+from includes.global_includes import *
 
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Marek Jablonski's Personal Portfolio</title>    
-
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-            
-            <!-- Custom styles for this template -->
-            <link href="main.css" rel="stylesheet">
-          </head>
-          
-        <body>
-            
-        <!-- header bar -->
-        <header data-bs-theme="dark">
-          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Marek Jablonski</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="resume.html">Work Experience</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link"  href="contact.html">Contact Me</a>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
-
-        <main><div class="container mt-5"><div class="row">
+def gen_page_projects():
+    output = gen_header()
+    output += '<div class="container mt-5">'
+    
+    output += '''<div class="row">
 
         <div class="col-md-9 order-md-2 d-flex align-items-center">
             <div class="row">
@@ -58,7 +16,9 @@
         <div class="col-md-3 order-md-1">
             <img class="img-fluid rounded shadow" src="images/headshot_sq_sm.png">
         </div>
-    </div><hr class="mt-3 mb-3">
+    </div>'''
+    
+    output +='''<hr class="mt-3 mb-3">
 	<!-- SENIOR DESIGN PROJECT-->
 	<div class="row">
 		<div class="col-md-9 order-md-1">
@@ -148,18 +108,6 @@
 	<div class="row">
 		<p> In the process of completing this project I needed lot of external resources including the application notes for the Battery Monitor IC and the detailed feedback from Solar Car leadership and alumni reviews. I'm quite happy with the final result even though there are many items that I would change with what I've learned since doing this project.</p>
 	</div>
-    </div><!-- container --> <hr class="featurette-divider">
-      <!-- FOOTER -->
-      <!-- FOOTER -->
-        <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2025 Marek Jablonski </p>
-        </footer>
-      </footer>
-    </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-        </body>
-    </html>
+    </div><!-- container -->'''
+    output += gen_footer()
+    return output

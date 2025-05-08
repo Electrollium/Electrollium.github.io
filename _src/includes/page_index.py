@@ -23,25 +23,18 @@ def gen_page_index():
         <!-- Three columns of text below the carousel -->
         <div class="row">
         
-          <div class="col-lg-4">
+          <div class="col-lg">
             <img class="img-fluid" src="images/p16_circle.png"  width="140" height="140" >
             <h2 class="fw-normal">Projects</h2>
             <p>A collection of summaries of the many projects I have been involved with.</p>
             <p><a class="btn btn-secondary" href="projects.html">View details &raquo;</a></p>
           </div>
           
-          <div class="col-lg-4">
+          <div class="col-lg">
             <img class="img-fluid" src="images/work_experience_image.png"  width="140" height="140" >
             <h2 class="fw-normal">Work Experience</h2>
             <p>Documentation of my various work experiences and my current Resume'.</p>
             <p><a class="btn btn-secondary" href="resume.html">View details &raquo;</a></p>
-          </div>
-          
-          <div class="col-lg-4">
-            <img class="img-fluid" src="images/document.png"  width="140" height="140" >
-            <h2 class="fw-normal">Documents</h2>
-            <p>Various documents such as Reflections and Papers are hosted here.</p>
-            <p><a class="btn btn-secondary" href="ethics.html">View details &raquo;</a></p>
           </div>
           
         </div><!-- /.row -->

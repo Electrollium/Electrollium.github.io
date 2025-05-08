@@ -41,14 +41,12 @@ def gen_header():
                   <li class="nav-item">
                     <a class="nav-link"  href="contact.html">Contact Me</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link"  href="ethics.html">Documents</a>
-                  </li>
 
                 </ul>
               </div>
             </div>
           </nav>
+        </header>
 
         <main>'''
         
