@@ -5,12 +5,12 @@ from includes.page_resume import *
 
 
 page_config = [
-    ['index.html',gen_page_index()],
-    ['projects.html',gen_page_projects()],
-    ['contact.html',gen_page_contact()],
-    ['resume.html',gen_page_resume()]
+    ['Home','index.html',gen_page_index()],
+    ['Projects','projects.html',gen_page_projects()],
+    ['Work Experience','resume.html',gen_page_resume()],
+    ['Contact Me','contact.html',gen_page_contact()]
     ]
 
 for page in page_config:
-    with open('../'+page[0],'w') as file: #page[0] is the file name
-        file.write(page[1])#generation output
+    with open('../'+page[1],'w') as file: #page[0] is the file name
+        file.write(page[2])#generation output
