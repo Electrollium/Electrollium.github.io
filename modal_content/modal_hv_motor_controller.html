@@ -3,7 +3,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <p>For Senior Design Project, my team of five proposed our own project, developing a High Voltage Motor Controller. The project's goal was to develop a viable platform for controlling the in-hub electric motors used in collegiate competition solar cars, most notably the Mitsuba M2096-III. I joined this team as the simulation and application expert, having worked with these motors for several years as a critical member of Iwa State University's PRISUM Solar Car Team.</p>
+    <p>For Senior Design Project, my team of five proposed our own project, developing a High Voltage Motor Controller. The project's goal was to develop a viable platform for controlling the in-hub electric motors used in collegiate competition solar cars, most notably the Mitsuba M2096-III. I joined this team as the simulation and application expert, having worked with these motors for several years as a critical member of Iowa State University's PRISUM Solar Car Team.</p>
 
 	<p>Existing controllers for this motor consist of the OEM Mitsuba 2095C and the Prohelion (formally Tritium) Wavesculpter 22. Both of these controllers are incredibly expensive and notorious for having catastrophic failures happen at the worst of times.</p>
 
@@ -18,7 +18,9 @@
 	<p>(motor and controller images)</p>
 	<p>Our project progress began by purchasing a off-the-shelf development board for a three phase inverter. For a development board we chose an ST-micro STSPIN32G0601 "600 V three-phase BLDC controller with embedded STM32 MCU". This development board had a very low current limit and a much higher voltage limit than was required, making it a useable but non-ideal choice. This board eventually suffered from an internal gate driver failure, killing the board, but we had already gained what experience we needed from it.</p>
 	<p>(development board picture)</p>
-	<p>During this time I was busy creating an LTSpice testbench for evaluating gate driver and mosfet combinations. The testbench consisted of a 3-phase load consisting of resistor-inductor pairs in a Y configuration. The 6 gate drive signals are loaded in from time-value CSV files generated from a custom python script simulating a sinusoudal gate drive algorithm.</p>
+	<p>During this time I was busy creating an LTSpice testbench for evaluating gate driver and mosfet configurations. The testbench consisted of a 3-phase load consisting of resistor-inductor pairs in a Y configuration. The 6 gate drive signals are loaded in from time-value CSV files generated from a custom python script simulating a sinusoudal gate drive algorithm. Initially the full gate driver and mosfet chain was modeled, but this simulation was incredibly slow, so the gate drive characteristics (rise time, fall time, dead time, voltage) were recorded and then generated and used directly. This change made it possible to model many tens of milliseconds of activity and performance within a minute of real time, a vast improvement over the minutes per 100us acheived in the full path simulation.</p>
+<p>(images of LT spice testbenches) (images of simulation outputs)</p>
+<p>After completing preliminary work we began designing revision one. To simplify design and assembly, we broke the design into two stacked PCBs. The lower PCB contains all high-power circuitry, and the upper PCB the logic and isolation.</p>
 
-	More information about our project proposal can be viewed <a href="docs/sdmay25_26_proposal.pdf">here</a>
+More information about this project can be seen on the ISU ECPE Senior Design website <a target="_blank" href="https://sdmay25-26.sd.ece.iastate.edu/">https://sdmay25-26.sd.ece.iastate.edu/</a>.
 </div>
