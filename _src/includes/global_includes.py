@@ -53,20 +53,7 @@ def gen_header():
     return output
     
 def gen_footer():
-    output = ''' <hr class="featurette-divider">
-      <!-- FOOTER -->
-      <!-- FOOTER -->
-        <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2025 Marek Jablonski </p>
-        </footer>
-      </footer>
-    </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-        </body>
-    </html>'''
+    with open('./includes/footer.html','r') as file: 
+        output = file.read()
     return output
     

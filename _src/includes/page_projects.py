@@ -12,7 +12,7 @@ def get_projects():
     
 
 def formatted_project_list_item(project):
-    output = '<div class="border border-3 border-dark-subtle rounded-4 shadow my-3 py-2 row project-row">' #row for project
+    output = f'<div class="border border-3 border-dark-subtle rounded-4 shadow my-3 py-2 row project-row" modalurl="{project["modalurl"]}">' #row for project
     
     output += '<div class="col-md-9 order-md-1"><div class="row">' #start of text
     output += f'<h3> {project["title"]} </h3>'
