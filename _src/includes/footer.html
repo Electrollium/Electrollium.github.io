@@ -33,9 +33,9 @@
                 $.get("./modal_content/"+ev.target.closest('.project-row').getAttribute("modalurl"), {}, function(data, status){
                     if(status === "success"){
                         $('#modal-content').html(data);
+                        $('#theonlymodal').modal('show');
                     }
                 });
-                $('#theonlymodal').modal('show');
             });
 
         </script>
