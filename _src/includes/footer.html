@@ -7,7 +7,7 @@
         </main>
 
         <div id="theonlymodal" class="modal fade" tabindex="-1">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-xl">
                 <div id="modal-content" class="modal-content">
 
                     <div class="modal-header">
@@ -33,9 +33,9 @@
                 $.get("./modal_content/"+ev.target.closest('.project-row').getAttribute("modalurl"), {}, function(data, status){
                     if(status === "success"){
                         $('#modal-content').html(data);
+                        $('#theonlymodal').modal('show');
                     }
                 });
-                $('#theonlymodal').modal('show');
             });
 
         </script>
