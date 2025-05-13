@@ -1,8 +1,8 @@
 [
 	{ 
 	"title": "High Voltage Motor Controller",
-	"blurb": "For our Senior Design Project, my team has been tasked with developing a High Voltage Motor Controller for lightweight automotive use. The project aims to develop a viable replacement for the existing solutions that are expensive and closed systems that are difficult to debug and repair. These motor controller combinations are used for competition collegiate Solar Cars in the low KW power range. As of writing, we are currently working on developing the first hardware and software prototypes.</p><p>For this project I am a hardware engineer and the team's topic expert, being the most knowledgeable on the systems and applications this project is intended to meet. While I had experience working with brushless motors and controllers before this project, I have learned a lot about the theory behind brushless motor control and how to design and build electrical hardware that is capable of transmitting and controlling an incredibly useful, but dangerous, amount of power. More information about our project proposal can be viewed <a href=\"docs/sdmay25_26_proposal.pdf\">here</a>",
-	"thumbnail": "seniordesign/M2096-3.jpg",
+	"blurb": "For our Senior Design Project, my team developing a prototype High Voltage Motor Controller. For this project I was a hardware engineer and the team's topic expert. While I had experience working with brushless motors and controllers before this project, I have learned a lot about the theory behind brushless motor control and how to design and build electrical hardware that is capable of transmitting and controlling an incredibly useful, but dangerous, amount of power.",
+	"thumbnail": "seniordesign/rev2_complete.jpg",
 	"modalurl": "modal_hv_motor_controller.html"
 	},
 	
