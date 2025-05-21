@@ -5,6 +5,15 @@
 .project-row:hover {
   background-color: rgba(0, 0, 0, .1);
   border-radius: 10px;
+  filter: brightness(90%);
+}
+
+.proj-desc-image {
+  width: 20rem;
+}
+
+.proj-desc-image:hover {
+  filter: brightness(90%);
 }
 
 .bi {
