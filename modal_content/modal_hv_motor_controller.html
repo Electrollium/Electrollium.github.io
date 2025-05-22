@@ -21,7 +21,7 @@
         <div class="card m-2 px-0 shadow proj-desc-image">
             <div class="card-body">
                 <h5 class="card-title">M2096 Kit</h5>
-                <p class="card-text">Source: Nomura Co.</p>
+                <p class="card-text">Image Credit: Nomura Co.</p>
             </div>
             <a target="_blank" href="images/seniordesign/M2096-3.jpg">
                 <img src="images/seniordesign/M2096-3.jpg" class="card-img-bottom">
@@ -92,7 +92,7 @@
     </div>
 
     <h4>Simulation</h4>
-	<p>While Development Board testing was underway, I was busy creating an LTSpice testbench for evaluating gate driver and mosfet configurations. The testbench consisted of a 3-phase load consisting of resistor-inductor pairs in a Y configuration. The 6 gate drive signals are loaded in from time-value CSV files generated from a custom python script simulating a sinusoudal gate drive algorithm. Initially the full gate driver and mosfet chain was modeled, but this simulation was incredibly slow, so the gate drive characteristics (rise time, fall time, dead time, voltage) were recorded and then generated and used directly. This change made it possible to model many tens of milliseconds of activity and performance within a minute of real time, a vast improvement over the minutes per 100us acheived in the full path simulation.</p>
+	<p>While Development Board testing was underway, I was busy creating an LTSpice testbench for evaluating gate driver and mosfet configurations. The testbench consisted of a 3-phase load consisting of resistor-inductor pairs in a Y configuration. The 6 gate drive signals are loaded in from time-value CSV files generated from a custom python script simulating a sinusoudal gate drive algorithm. Initially the full gate driver and mosfet chain was modeled, but this simulation was incredibly slow, so the gate drive characteristics (rise time, fall time, dead time, voltage) were recorded and then generated and used directly. This change made it possible to model many tens of milliseconds of activity and performance within a minute of real time, a vast improvement over the minutes per us acheived in the full path simulation.</p>
 
     <div class="row justify-content-center mb-3">
 
@@ -110,7 +110,7 @@
                 <h5 class="card-title">Characterization Waveform</h5>
             </div>
             <a target="_blank" href="images/seniordesign/characterization_full_waveform.png">
-                <img src="images/seniordesign/characterization_full_waveform.png" class="card-img-bottom">
+                <img src="images/seniordesign/characterization_full_waveform_thumb.png" class="card-img-bottom">
             </a>
         </div>
 
@@ -127,7 +127,7 @@
             <div class="card-body">
                 <h5 class="card-title">Testbench Waveform</h5>
             </div>
-            <a target="_blank" href="images/seniordesign/tb_full_waveform.png">
+            <a target="_blank" href="images/seniordesign/tb_full_waveform_highres.png">
                 <img src="images/seniordesign/tb_full_waveform.png" class="card-img-bottom">
             </a>
         </div>
@@ -141,11 +141,93 @@
     <p>The Power Board consists of three identical half-bridge drivers and the power input terminals. The physical layout of this board was chosen to be similar to that of the Wavesculpter 22, as we had access to spare heatsinks and mounting hardware for that board layout. For our power transistors we decided to use standard silicon MOSFETs due to the their high resilience and low cost. Each half-bridge has a total of 6 MOSFETs mounted on the reverse of the board such that they were in direct contect with the heatsink-mounted thermal pad. To drive the gates of the power transistors, each half-bridge had its own half-gate bridge driver powered from an isolated 12V supply. A large 10uF bootstrap capacitor was added to power the high-side of the driver when the output is high. Along with the primary drive circuitry, the Power Board contains a large number of 
     high-voltage decoupling capacitors and three hall-effect current sensors, two for the phases and one for the DC bus.</p>
 
+    <div class="row justify-content-center mb-3">
+
+        <div class="card m-2 px-0 shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Power Board Front</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/power_front.jpg">
+                <img src="images/seniordesign/power_front.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+        <div class="card m-2 px-0 shadow shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Power Board Back</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/power_back.jpg">
+                <img src="images/seniordesign/power_back.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+    </div>
+
     <h5>The Logic Board</h5>
     <p>The Logic Board is designed around a central microcontroller at its heart that runs the onboard software, communicates with the outside world, and outputs the six PWM gate drive signals. Power is supplied for all logic and non-output functions from an external 12V source that is protected against over-voltage, reverse-voltage, and over-current. This power source is converted to 5V for logic, isolated 12V for the gate drive circuitry, and isolated 5V for the digital isolators. This design used pre-packaged switching power supplies for ease of design, even though they were slightly more expensive than a discrete solution. The gate drive signals and the low-voltage power for the Power Board are electrically isolated from the majority of the Logic Board and all external interfaces for safety and to reduce the chances for ground loops or ground bounce. The onboard microcontroller interfaces with the outside world through CAN, User GPIO, and a Position HALL-effect Sensor Interface. As this is geared towards automotive, CAN is the protocol of choice for data communication, but one of the objectives of the project was to make it as accessible as possible. Having the GPIO controls for the user makes it much easier to get up and running without external infrastructure, so to emulate this the logic board contained an onboard potentiometer, 5 onboard buttons, and 4 LEDs. As the motor contains onboard HALL sensors, this is used by the logic board to provide accurate positioning information without the need for phase voltage monitoring as is required by sensorless control. While the three onboard sensors can only provide 60deg resolution, simple interpolation can be done in software.</p>
 
+    <div class="row justify-content-center mb-3">
+
+        <div class="card m-2 px-0 shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Logic Board Front</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/logic_front.jpg">
+                <img src="images/seniordesign/logic_front.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+        <div class="card m-2 px-0 shadow shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Logic Board Back</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/logic_back.jpg">
+                <img src="images/seniordesign/logic_back.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+    </div>
+
     <h4>Results</h4>
     <p>While our ability to fully test the board we created was limited by software delays and the unavailability of a Motor Dyno, In a zero-load configuration the motor was able to reach over 1000RPM, more than 10% above our target speed. Despite the continuous abuse the hardware faced from software errors and usage, there were no hardware failures. While no hardware failed, our first revision used high voltage capacitors that quickly degraded to the point where they were effectively non-functional. These were successfully replaced on the second revision.</p>
+
+    <div class="row justify-content-center mb-3">
+
+        <div class="card m-2 px-0 shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Boards Stacked</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/boards_stacked.jpg">
+                <img src="images/seniordesign/boards_stacked.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+        <div class="card m-2 px-0 shadow shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Full Assembly</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/full_assembly.jpg">
+                <img src="images/seniordesign/full_assembly.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+        <div class="card m-2 px-0 shadow shadow proj-desc-image">
+            <div class="card-body">
+                <h5 class="card-title">Running Setup</h5>
+                <p class="card-text">Image Credit: Jonah Frosch</p>
+            </div>
+            <a target="_blank" href="images/seniordesign/rev2_complete.jpg">
+                <img src="images/seniordesign/rev2_complete.jpg" class="card-img-bottom">
+            </a>
+        </div>
+
+    </div>
 
     <h4>Future improvements</h4>
     <p>After completing this project with my team over the course of two semesters, there are quite a few technical aspects that I would like to work on in the future if given the opportunity. Using a continuous power supply for the high-side gate drivers would simplify the gate driving logic software and allow continuous 100% PWM output at all speeds. While this would be costlier than a bootstrap capacitor, the project was well under the cost target and the benefits may be well worth it. Another improvement to this would be outout voltage and temperature sensing. While it would be incredibly useful to have these metrics,transferring analog signals across a voltage barrier is difficult, and it may be easier to move the microcontroller to the isolated domain and instead isolate the power input and CAN connection. I would also like to look into GaNFETs again, which we initially discounted due to cost and fragility concerns</p>
