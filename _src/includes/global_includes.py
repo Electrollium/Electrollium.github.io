@@ -36,7 +36,7 @@ def gen_header():
                     <a class="nav-link" href="projects.html">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="resume.html">Work Experience</a>
+                    <a class="nav-link" href="resume.html">Resume</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link"  href="contact.html">Contact Me</a>
