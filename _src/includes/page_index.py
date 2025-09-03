@@ -8,7 +8,7 @@ def gen_page_index():
         
             <div class="row">
                 <h2 class="featurette-heading fw-normal lh-1">Hi, I'm Marek</h2>
-                <p class="lead">I'm currently a Senior studying Computer Engineering at Iowa State University. I enjoy building projects and fixing things when I'm not  busy studying or helping lead the PRISUM solar car team here at Iowa State. My current Career Objective is to earn my Master's Degree in Computer Engineering and enter the workforce within the fields of embedded and power electronics.</p>
+                <p class="lead">I'm currently a Master's student studying Computer Engineering at Iowa State University. I enjoy working on challenging projects and mentoring my peers on the ISU Solar Car team.</p>
             </div>
             
           </div>
@@ -33,7 +33,7 @@ def gen_page_index():
           <div class="col-lg">
             <img class="img-fluid" src="images/work_experience_image.png"  width="140" height="140" >
             <h2 class="fw-normal">Work Experience</h2>
-            <p>Documentation of my various work experiences and my current Resume'.</p>
+            <p>Documentation of my various work experiences and my current Resume.</p>
             <p><a class="btn btn-secondary" href="resume.html">View details &raquo;</a></p>
           </div>
           
